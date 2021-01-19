@@ -3,22 +3,39 @@ import asyncio
 import time
 
 from discord.ext import commands, tasks
+
+
+print("Attempting to start...")
 token = ""
 client = commands.Bot(command_prefix="-",self_bot=True)
 client.remove_command("help")
 async def status_task():
     while True:
-        await client.change_presence(activity=discord.Streaming(name='lol', url='https://www.twitch.tv/4xr'))
-        await asyncio.sleep(2)
-        await client.change_presence(activity=discord.Streaming(name='fuck', url='https://www.twitch.tv/4xr')) 
-        await asyncio.sleep(2)
-        await client.change_presence(activity=discord.Streaming(name='cord api', url='https://www.twitch.tv/4xr')) 
-        await asyncio.sleep(2)
+        await client.change_presence(activity=discord.Streaming(name='X', url='https://www.twitch.tv/4xr'))
+        await asyncio.sleep(3)
+        await client.change_presence(activity=discord.Streaming(name='X Y', url='https://www.twitch.tv/4xr')) 
+        await asyncio.sleep(3)
+        await client.change_presence(activity=discord.Streaming(name='X Y Z', url='https://www.twitch.tv/4xr')) 
+        await asyncio.sleep(3)
+        await client.change_presence(activity=discord.Streaming(name='X Y', url='https://www.twitch.tv/4xr')) 
+        await asyncio.sleep(3)
+        await client.change_presence(activity=discord.Streaming(name='X', url='https://www.twitch.tv/4xr'))
+        await asyncio.sleep(3)
+        await client.change_presence(activity=discord.Streaming(name='X Y', url='https://www.twitch.tv/4xr')) 
+        await asyncio.sleep(3)
+        await client.change_presence(activity=discord.Streaming(name='X Y Z', url='https://www.twitch.tv/4xr')) 
+        await asyncio.sleep(3)
+        await client.change_presence(activity=discord.Streaming(name='X Y', url='https://www.twitch.tv/4xr')) 
+        await asyncio.sleep(3)
+        await client.change_presence(activity=discord.Streaming(name='X', url='https://www.twitch.tv/4xr'))
+        await asyncio.sleep(3)
 @client.event
-async def on_ready():
-    print("rofl")
+async def on_connect():
+    print(f"Connected to => {client.user.name}")
     await status_task()
-try: 
-    client.run(token, reconnect=True, bot=False)
-except Exception:
-    pass
+
+
+
+
+    
+client.run(token, reconnect=True, bot=False)
