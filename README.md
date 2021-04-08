@@ -1,11 +1,10 @@
 # fuckapi
 
-idk i jus had this sitting in my files
+Had this sitting around somewhere, had no use to me so I thought I'd drop this since someone who is stalking my page might want it 
 
 # What does it do?
 
-should change your status every however many seconds you put 
-may get ratelimited if its below 2
+This is a simple script where your status should change every few seconds under the streaming RPC. Ratelimits can still be caused depending on how long you decide to make it. I recommend making it 2+ seconds
 
 # Additional
 
